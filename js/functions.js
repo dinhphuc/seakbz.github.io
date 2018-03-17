@@ -1,7 +1,7 @@
 ﻿function login() {
     var pass = document.getElementById("password").value;
     if (pass == "PhucTrang1810") {
-        window.location.href = 'home.html';
+        window.location.href = 'home/';
     }
 }
 
