@@ -1,0 +1,128 @@
+﻿<!--
+Edited Phúc Binz
+© 2018 BA Script. Phúc Binz all right Copyright.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Anh Yêu Em</title>
+    <!-- Font Independence -->
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+    <!-- Default CSS -->
+    <link href="css/default.css" type="text/css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <!-- Script -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <!-- Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet' type='text/css' />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <audio autoplay="autoplay" loop="loop">
+        <source src="music/motnha.mp3" type="audio/mp3" />
+    </audio>
+    <div id="main">
+        <div id="mainDiv">
+            <div id="content">
+
+                <!-- TEXT [EDIT ONLY] -->
+                <div id="code">
+                    <span class="comments">~</span><br />
+                    <span class="space" /><span class="comments">*Một điều anh muốn nói,</span><br />
+                    <span class="space" /><span class="comments">*Tận ở trong trái tim của anh!</span><br />
+                    <span class="space" /><span class="comments">~</span><br />
+                    ❤ <span class="keyword">Đình Phúc</span> <br />
+                    ❤ <span class="keyword">Huyền Trang</span><br />
+                    <br />
+                    <br />
+                    <span class="comments">// Anh đã yêu em.</span><br />
+                    Từ đó anh luôn nghĩ về em, luôn muốn bên cạnh em;<br />
+                    <span class="comments">// Thời gian trôi đi...</span><br />
+                    Anh vẫn luôn nghĩ về em, thương em thật nhiều;<br />
+                    <span class="comments">// Sự sắp đặt ngọt ngào.</span><br />
+                    Anh luôn nhìn em trong sự im lặng;<br />
+                    <span class="comments">// Bầu trời tĩnh lặng.</span><br />
+                    <span class="keyword">Anh</span> rất <span class="keyword">hạnh phúc</span>;<br />
+                    <span class="keyword">Anh</span> muốn em cũng <span class="keyword">hạnh phúc</span>;<br />
+                    <span class="placeholder" /><span class="comments">// Ngay bây giờ, lúc này....</span><br />
+                    <span class="placeholder" /><span class="comments">// Có thể ở trong tương lai.</span><br />
+                    <span class="placeholder" />Một giấc mơ? Anh muốn nó thành sự thật;<br />
+                    <span class="comments">// Anh muốn em hạnh phúc và thuộc về anh.</span><br />
+                    <br />
+                    <br />
+                    Anh muốn nói với em:<br />
+                    <span class="keyword"> Em </span>, Anh yêu em - mãi mãi....<br /><br />
+                    <a href="BirthDay2/"><input type="button" class="btn btn-danger" value="Say I Do!" /></a>
+                    <a href="Trang/"><input type="button" class="btn btn-danger" value="Em!" /></a>
+                </div>
+                <!-- END TEXT -->
+                <!-- MESSAGES HEART -->
+                <div id="loveHeart">
+                    <canvas id="garden"></canvas>
+                    <div id="words">
+                        <div id="messages">
+                            Em ....Khoảng thời gian chúng mình có nhau 💕
+                            <div id="elapseClock"></div>
+                        </div>
+                        <div id="loveu">
+                            Anh Yêu Em, Mãi Yêu Em<br />
+                            <div class="signature">
+                                -Phúc Trang<div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Copyright/Watermark -->
+                <div style="text-align:center;margin:0px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+                    Desigin By PhucBinz
+                </div>
+                <!-- [!] CHANGE TIME HERRE [!] -->
+                <script type="text/javascript">
+                    var offsetX = $("#loveHeart").width() / 2;
+                    var offsetY = $("#loveHeart").height() / 2 - 55;
+                    var together = new Date();
+                    together.setFullYear(2018, 00, 26); // <--- Edit Time Here
+                    together.setHours(17);
+                    together.setMinutes(38);
+                    together.setSeconds(18);
+                    together.setMilliseconds(13);
+
+                    if (!document.createElement('canvas').getContext) {
+                        var msg = document.createElement("div");
+                        msg.id = "errorMsg";
+                        msg.innerHTML = "Your browser doesn't support HTML5!<br />Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+                        document.body.appendChild(msg);
+                        $("#code").css("display", "none")
+                        $("#copyright").css("position", "absolute");
+                        $("#copyright").css("bottom", "10px");
+                        document.execCommand("stop");
+                    } else {
+                        setTimeout(function () {
+                            startHeartAnimation();
+                        }, 5000);
+
+                        timeElapse(together);
+                        setInterval(function () {
+                            timeElapse(together);
+                        }, 500);
+
+                        adjustCodePosition();
+                        $("#code").typewriter();
+                    }
+                </script>
+                <!-- [!] CHANGE TIME HERRE [!] -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Love is when the other person's happiness is more important than your own.">
+    <meta name="author" content="kBz">
+    <meta name="copyright" content="seakBz.IT">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Say I Love You">
+    <meta property="og:description" content="Love is when the other person's happiness is more important than your own.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Say I Love You">
+    <meta property="og:locale" content="vi_VN">
+    <title>Send my love</title>
+    <link rel="author" href="https://plus.google.com/u/0/108443613096446306111/">
+    <link rel="publisher" href="https://plus.google.com/u/0/108443613096446306111/">
+    <link rel="canonical" href="seakBz.design">
+    <link rel="shortcut icon" href="https://sbenny.com/forums/images/smilies/icon_heart.gif" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/2.3.5/mini-dark.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700&amp;subset=vietnamese">
+    <link rel="stylesheet" href="css/juno_okyo.css">
+    <link rel="stylesheet" href="css/vegas.min.css">
+    <script>
+        /* EDIT HERE https://4.bp.blogspot.com/-sTKTqHrxNY0/VoK6W7fAmHI/AAAAAAAANX4/ATSxOk466_s/s1600/Hinh-nen-tinh-yeu-trai-tim-de-thuong-1600x1000.jpg */
+        var CONFIG = {
+            background: 'nht.png',
+            content: [{
+
+                text: 'Chào em người con gái tuyệt vời!\n',
+                delay: 4000
+            }, {
+                text: 'Anh đã để ý em từ lâu lắm rồi\n',
+                delay: 2000
+            }, {
+                text: 'Hôm nay anh ms có đủ dũng cảm để nói vs em một đều :D\n',
+                delay: 1000
+            },
+            {
+                text: '\nEm đồng ý làm người yêu anh nhé.......',
+                delay: 1000
+            }],
+
+            alert: {
+                troll: true, // Chỉ cho nhấn Đồng ý
+                success: {
+                    title: 'Cảm ơn em. Người anh yêu!',
+                    message: 'Đó là câu trả lời mà anh mong đợi!'
+                },
+                error: {
+                    title: 'Thật tiếc!',
+                    message: 'Dù sao thì anh cũng tôn trọng quyết định của em.'
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class=" row col-md-10 col-lg-offset-2 text-center">
+                <p id="txt" class=""></p>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-sm col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-5 row">
+        <div id="buttons" style="display: none;">
+            <button type="button" class="primary large" id="btn-yes">Đồng ý</button>
+            <button type="button" class="large" id="btn-no">Không đồng ý</button>
+            <a href="https://www.seakbz.design/" target="_blank"><input type="button" class="primary large" style="position: absolute;left: 100px;bottom:0px;" id="nextpage" value="Trang sau"></a>
+            <div id="tet_countdown" style="position: absolute;left: 800px;bottom:0px;">
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert@2.0.8/dist/sweetalert.min.js"></script>
+    <script src="js/juno_okyo.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-45794712-25"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-45794712-25');
+    </script>
+
+    <!-- BACKGROUND MUSIC -->
+
+    <audio autoplay="autoplay" loop="loop">
+        <source src="Dear_me.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- END BACKGROUND MUSIC -->
+
+
+    <script>
+        var tetCountdown = {
+            utc_vntet_offset: 0,
+            countdownInterval: null,
+            selectorId: "",
+            init: function (vntet_date, selectorId) {
+                this.utc_vntet_offset = vntet_date.getTime();
+                this.selectorId = selectorId;
+            },
+            countdown: function () {
+                var time_offset = tetCountdown.utc_vntet_offset - new Date().getTime();
+                if (time_offset > 0) {
+                    seconds = Math.floor(time_offset / 1000);
+                    minutes = Math.floor(seconds / 60);
+                    hours = Math.floor(minutes / 60);
+                    days = Math.floor(hours / 24);
+
+                    hours = hours - (days * 24);
+                    minutes = minutes - (days * 24 * 60) - (hours * 60);
+                    seconds = seconds - (days * 24 * 60 * 60) - (hours * 60 * 60) - (minutes * 60);
+
+                    $("#" + tetCountdown.selectorId).html("<i class='label label-warning'></i> Còn <strong>" + days + "</strong> ngày, " + hours + " giờ, " + minutes + " phút, " + seconds + " Là đến tết nhé :v ");
+                }
+                else {
+                    time_offset = Math.abs(time_offset);
+                    seconds = Math.floor(time_offset / 1000);
+                    minutes = Math.floor(seconds / 60);
+                    hours = Math.floor(minutes / 60);
+                    days = Math.floor(hours / 24);
+
+                    if (days <= 7) {
+                        $("#" + tetCountdown.selectorId).html("<i class='fa-fw fa fa-info'></i> Chúc mừng năm mới xuân <strong>Mậu Tuất 2018</strong>");
+                    }
+                }
+            },
+            start: function () {
+                this.countdownInterval = setInterval(this.countdown, 1000);
+            },
+            stop: function () {
+                clearInterval(this.countdownInterval);
+            }
+        };
+        tetCountdown.init(new Date(2018, 1, 16), "tet_countdown");
+        tetCountdown.start();
+    </script>
+</body>
+</html>
