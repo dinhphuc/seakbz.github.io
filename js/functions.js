@@ -1,9 +1,4 @@
-﻿function login() {
-    var pass = document.getElementById("password").value;
-    if (pass == "PhucTrang1810") {
-        window.location.href = 'Home/';
-    }
-}
+﻿var _0x8ebd=["\x76\x61\x6C\x75\x65","\x70\x61\x73\x73\x77\x6F\x72\x64","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x50\x68\x75\x63\x54\x72\x61\x6E\x67\x31\x38\x31\x30","\x68\x72\x65\x66","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x48\x6F\x6D\x65\x2F"];function login(){var _0xbc85x2=document[_0x8ebd[2]](_0x8ebd[1])[_0x8ebd[0]];if(_0xbc85x2== _0x8ebd[3]){window[_0x8ebd[5]][_0x8ebd[4]]= _0x8ebd[6]}}
 
 var $window = $(window), gardenCtx, gardenCanvas, $garden, garden;
 var clientWidth = $(window).width();
